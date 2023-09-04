@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "5bc4cdf7-cf93-40a8-ba71-207e924ca4ca",
+		"name": "Api Jobseeker Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index Candidates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://your-api-domain.com/api/candidates",
+					"protocol": "http",
+					"host": [
+						"your-api-domain",
+						"com"
+					],
+					"path": [
+						"api",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidate By Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create candidates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"example@example.com\",\n  \"full_name\": \"John Doe\",\n  \"dob\": \"1990-01-01\",\n  \"pob\": \"New York\",\n  \"gender\": \"M\",\n  \"year_exp\": \"5\",\n  \"last_salary\": \"50000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidate updated",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"updated@example.com\",\n  \"full_name\": \"Updated Name\",\n  \"dob\": \"1990-02-02\",\n  \"pob\": \"Los Angeles\",\n  \"gender\": \"F\",\n  \"year_exp\": \"6\",\n  \"last_salary\": \"55000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidates/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "candidate delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/candidates/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidates",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
